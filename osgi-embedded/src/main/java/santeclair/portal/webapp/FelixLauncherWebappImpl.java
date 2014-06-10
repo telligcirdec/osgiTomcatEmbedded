@@ -39,12 +39,6 @@ public class FelixLauncherWebappImpl extends AbstractFelixLauncher implements Se
 	@Autowired
 	private HostActivator hostActivator;
 
-	@Override
-	public void start() {
-		LOGGER.debug("FelixLauncherWebappImpl.start()");
-		super.start();
-	}
-
 	public Bundle[] getInstalledBundles() {
 		LOGGER.debug("FelixLauncherWebappImpl.getInstalledBundles");
 		if (hostActivator != null) {

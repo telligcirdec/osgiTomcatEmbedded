@@ -7,11 +7,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import santeclair.portal.osgi.service.log.ExtendedLogReaderService;
-import santeclair.portal.osgi.service.log.ExtendedLogService;
-import santeclair.portal.osgi.service.log.internal.ExtendedLogReaderServiceFactory;
-import santeclair.portal.osgi.service.log.internal.ExtendedLogServiceFactory;
-
 @Component
 public class HostActivator implements BundleActivator {
 
