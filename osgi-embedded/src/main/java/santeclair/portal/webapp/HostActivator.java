@@ -22,19 +22,11 @@ public class HostActivator implements BundleActivator {
     public void start(BundleContext bundleContext) {
         LOGGER.debug("Starting HostActivator");
         this.bundleContext = bundleContext;
-        registerExtendedLogService();
     }
 
     public void stop(BundleContext bundleContext) {
         LOGGER.debug("Stopping HostActivator");
         this.bundleContext = null;
-    }
-
-    private void registerExtendedLogService() {
-        ExtendedLogReaderServiceFactory extendedLogReaderServiceFactory = new ExtendedLogReaderServiceFactory();
-        bundleContext.registerService(ExtendedLogReaderService.class.getName(), extendedLogReaderServiceFactory, null);
-        ExtendedLogServiceFactory extendedLogServiceFactory = new ExtendedLogServiceFactory(extendedLogReaderServiceFactory);
-        bundleContext.registerService(ExtendedLogService.class.getName(), extendedLogServiceFactory, null);
     }
 
     public Bundle[] getBundles() {
